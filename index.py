@@ -36,7 +36,7 @@ class FoodItem(TypedDict):
 	ServingUnit: str # station
 	Traits: str
 	
-yummy = re.compile(r'chicken carnitas|tenders', re.IGNORECASE)
+yummy = re.compile(r'chicken carnitas|^chicken tenders', re.IGNORECASE)
 
 def get_menu(location_id: int, date: str) -> List[FoodItem]:
 	url = API_MENU % (location_id, date)
